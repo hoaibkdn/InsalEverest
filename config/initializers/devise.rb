@@ -6,13 +6,13 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '1c12b0db14191ba2f4b2e6520abdebbe75b0d5e2ce4cf15e76729cbee11d9e94332d81acd20f03b3b5d785954d12ebdddec201c7449a995439d530419ed07575'
+  # config.secret_key = '712b8622063b852cf696cb7f6af2d0114a5f686d5fb3687b13edd069538d70464932732131d34fa5158bb2f2015d5e400314364ecadfe7893759c55b479f931a'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -24,7 +24,7 @@ Devise.setup do |config|
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
-  require 'devise/orm/active_record'
+  require "devise/orm/active_record"
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
@@ -108,7 +108,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'afe99734877698b604637e6bdf2aa06795a617e387273b284b17958201f3e19138abaf07464dff8b11fa8570a352e98254500e82026231eeec6a9de2a1e0c7e5'
+  # config.pepper = '5fa06573cfe790c774cab045e1d13e57e6744e704a009061cf89c5b3d7c5eae6ec9f168ce7a6a5a155717e321c207a8a91b862bafd35b04d9c8b6f13b84fc2a5'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -143,7 +143,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
-  # config.remember_for = 2.weeks
+  config.remember_for = 30.days
 
   # Invalidates all the remember me tokens when the user signs out.
   config.expire_all_remember_me_on_sign_out = true
@@ -157,7 +157,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length.
-  config.password_length = 6..128
+  config.password_length = 8..24
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
@@ -167,7 +167,7 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  # config.timeout_in = 30.minutes
+  config.timeout_in = 1.days
 
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
