@@ -41,6 +41,10 @@ gem "devise"
 gem "bootstrap-sass", "~> 3.3.6"
 gem "font-awesome-rails"
 gem "pry"
+gem "config"
+gem "figaro"
+gem "paranoia", "~> 2.2"
+gem "cancancan", "~> 1.10"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
