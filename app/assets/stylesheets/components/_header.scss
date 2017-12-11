@@ -1,0 +1,24 @@
+.header {
+  overflow: auto;
+  padding: 15px 0;
+  background: $cl-header-bg;
+  &__logo {
+    float: left;
+    margin: 0;
+  }
+  &__link {
+    display: flex;
+    color: $cl-white;
+    &:hover {
+      color: $cl-white;
+    }
+  }
+  &__img {
+    @include square(35px);
+  }
+  &__name {
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 3px;
+  }
+}

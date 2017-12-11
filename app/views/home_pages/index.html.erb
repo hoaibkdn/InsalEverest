@@ -1,2 +1,28 @@
-<h1>HomePages#index</h1>
-<p>Find me in app/views/home_pages/index.html.erb</p>
+<div>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__logo">
+                <a href="#" class="header__link">
+                    <%= image_tag "alibaba-logo.png", height: "30px", width: "30px", class: "logo" %>
+                    <h3 class="header__name">Alibaba</h3>
+                </a>
+            </h1>
+        </div>
+    </header>
+    <form class="form">
+        <div class="form__input input-group mb-2 mb-sm-0">
+            <div class="form__icon input-group-addon"><i class="fa fa-user"></i></div>
+            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+        </div>
+        <div class="form__input input-group mb-2 mb-sm-0">
+            <div class="form__icon input-group-addon"><i class="fa fa-key"></i></div>
+            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Password">
+        </div>
+        <div class="form__checkbox form-check mb-2 mb-sm-0">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Remember me
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary form__submit ">Submit</button>
+    </form>
+</div>
