@@ -1,2 +1,10 @@
+@import "abstracts/all";
+
+// Vendors
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// Style for all
+@import "components/all";
+@import "layouts/all";
+@import "pages/all";

@@ -1,0 +1,35 @@
+.form {
+  width: 400px;
+  background: $cl-form-bg;
+  padding: 50px 30px;
+  margin: auto;
+  // margin-top: 30px;
+  @extend %position-center;
+  // transform: translate(-50%);s
+
+  &__input {
+    padding-bottom: 30px;
+    & > .form-control,
+    & > .form__icon {
+      border-radius: 0;
+      border: 0;
+    }
+  }
+  &__submit {
+    background: $cl-form-btn;
+    width: 100%;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+    &:hover {
+      background-color: $cl-form-btn-active;
+    }
+  }
+  &__checkbox {
+    & > .form-check-label {
+      color: $cl-white;
+      font-weight: 100;
+    }
+    padding-bottom: 20px;
+  }
+}
