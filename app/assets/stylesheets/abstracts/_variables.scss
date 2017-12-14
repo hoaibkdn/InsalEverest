@@ -4,9 +4,35 @@ $cl-white: #fff;
 $cl-black: #000;
 $cl-transparent: rgba(0, 0, 0, 0);
 $cl-header-bg: #333;
-$cl-body-bg: #333;
+$cl-body-bg: #777;
 
 // Login
 $cl-form-bg: #333;
 $cl-form-btn:#3aa96e;
 $cl-form-btn-active:#45d287;
+
+// Tables
+$cl-table-bg-default: #ddd;
+$cl-table-bg-ordered: #fdb87a;
+$cl-table-bg-ordered-choosing: #e87814;
+
+// Ordered board
+$cl-ordered-board-text: #333;
+$cl-ordered-board-btn-active: #e87814;
+$cl-ordered-board-btn-default: #ccc;
+$cl-ordered-board-btn-hover: #fdb87a;
+
+// product
+$cl-tab-product-active: #333;
+$cl-tab-product-border: #333;
+$cl-product-text: #e87814;
+$cl-icon-bg: #777;
+$cl-icon-bg-hover: #333;
+
+
+
+//---------- FONT ------------
+$f-tiny: 10px;
+$f-small: 12px;
+$f-medium: 16px;
+$f-large: 20px;

@@ -1,0 +1,36 @@
+.nav-tabs > li > .tabs-menu__link {
+  border: none;
+  border-radius: 0;
+  background: $cl-body-bg;
+  color: $cl-white;
+}
+
+.nav-tabs > .tab-product__item {
+  clear: both;
+}
+
+.nav-tabs > .tab-product__item.active > a {
+  background: $cl-tab-product-active;
+  border-color: $cl-tab-product-active;
+  color: $cl-white;
+  box-sizing: border-box;
+  cursor: pointer;
+  &:focus {
+    background-color: $cl-tab-product-active;
+    color: $cl-white;
+    border: 2px solid $cl-tab-product-active;
+  }
+  &:hover {
+    border: 2px solid $cl-tab-product-active;
+  }
+}
+
+.nav-tabs > .tab-product__item > a {
+  border: 2px solid $cl-tab-product-active;
+  border-radius: 0;
+  box-sizing: border-box;
+  margin-right: 0;
+  &:hover {
+    border: 2px solid $cl-tab-product-active;
+  }
+}

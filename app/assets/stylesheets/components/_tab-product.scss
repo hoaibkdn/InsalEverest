@@ -1,0 +1,21 @@
+.tab-product {
+  // overflow: auto;
+  display: inline-block;
+  border: none;
+  &__item {
+    clear: both;
+    & > a {
+      @include rectangle(90px, 100px);
+      border: 2px solid $cl-tab-product-border;
+    }
+  }
+  & > .active {
+    background: $cl-tab-product-active;
+  }
+  &:after {
+    display: none;
+  }
+  &__content {
+    display: inline-block;
+  }
+}

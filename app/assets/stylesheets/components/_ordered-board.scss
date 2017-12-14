@@ -1,0 +1,75 @@
+.ordered-board {
+  border: 1px solid $cl-ordered-board-text;
+  margin-top: 30px;
+  padding: 15px 10px;
+  &__header {
+    display: flex;
+    justify-content: center
+  }
+  &__logo {
+    margin-top: 15px;
+    margin-right: 30px;
+  }
+  &__title {
+    color: $cl-ordered-board-text;
+  }
+  &__body {
+    padding: 0 15px;
+    margin-top: 10px;
+  }
+  &__table {
+    & th {
+      text-align: center;
+    }
+    & > tbody > tr > td {
+      vertical-align: middle;
+    }
+    &--delete {
+      color: $cl-icon-bg;
+      &:hover {
+        cursor: pointer;
+        color: $cl-icon-bg-hover;
+      }
+    }
+    text-align: center;
+    &--quantity {
+      & > i {
+        padding: 5px 3px;
+        border: 1px solid $cl-icon-bg;
+        cursor: pointer;
+        &:hover {
+          background-color: $cl-icon-bg;
+        }
+      }
+    }
+    &--number {
+      padding: 0 3px;
+      display: inline-block;
+      font-size: $f-medium;
+    }
+  }
+  &__total {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn-group {
+    display: flex;
+    justify-content: center;
+    &--save {
+      background: $cl-ordered-board-btn-active;
+      border-radius: 0;
+      margin-right: 10px;
+      color: $cl-white;
+      &:hover {
+        background-color: $cl-ordered-board-btn-hover;
+      }
+    }
+    &--pay {
+      border: 1px solid $cl-ordered-board-btn-default;
+      border-radius: 0;
+      &:hover {
+        background-color: $cl-ordered-board-btn-hover;
+      }
+    }
+  }
+}

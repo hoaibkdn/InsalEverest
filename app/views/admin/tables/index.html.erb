@@ -1,1 +1,30 @@
-Index table nhe ;)
+<div class="body-content">
+
+  <%# Render header %>
+  <%= render "/common/header" %>
+  <div class="container">
+
+    <%# Render main tab menu %>
+    <%= render "/common/tabs-menu" %>
+
+    <%# Render content each tab %>
+    <div class="tabs-content">
+      <div class="col-md-8">
+        <div class="tab-content tabs-menu__content">
+
+          <%# Render all tables %>
+          <%= render "tables-view.html" %>
+
+          <%# show all product %>
+          <%= render "/admin/products/products-view" %>
+        </div>
+      </div>
+
+      <%# ordering board %>
+      <div class="col-md-4">
+        <%= render "ordered-board.html" %>
+      </div>
+    </div>
+
+  </div>
+</div>

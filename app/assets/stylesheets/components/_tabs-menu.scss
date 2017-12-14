@@ -1,0 +1,14 @@
+.tabs-menu {
+  position: absolute;
+  top: 60px;
+  &__content {
+    padding-top: 30px;
+    background: $cl-white;
+  }
+}
+
+.tabs-content {
+  background: $cl-white;
+  overflow: auto;
+  position: relative;
+}

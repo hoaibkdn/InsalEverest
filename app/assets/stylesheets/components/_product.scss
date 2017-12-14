@@ -1,0 +1,44 @@
+.product {
+  position: relative;
+  margin-top: 10px;
+  &__img {
+    height: 200px;
+  }
+  &__text {
+    color: $cl-white;
+    position: absolute;
+    bottom: 60px;
+    right: 5px;
+    padding: 0 5px;
+    background: $cl-product-text;
+    &--name {
+      padding-top: 5px;
+      margin-bottom: 5px;
+    }
+    &--price {
+      margin-bottom: 5px;
+    }
+  }
+  &__quantity {
+    margin: auto;
+    width: 100px;
+    text-align: center;
+    &--number {
+      @include square(40px);
+      padding: 5px;
+      text-align: center;
+      font-size: $f-large;
+    }
+    & > i {
+      padding: 5px 3px;
+      vertical-align: middle;
+      background: $cl-icon-bg;
+      color: $cl-white;
+      margin-bottom: 6px;
+      cursor: pointer;
+      &:hover {
+        background-color: $cl-icon-bg-hover;
+      }
+    }
+  }
+}
