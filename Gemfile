@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 # Using gem by Tien
 gem "doorkeeper"
 gem "devise"
-gem "bootstrap-sass", "~> 3.3.6"
+gem "bootstrap-sass", "~> 3.3.7"
 gem "font-awesome-rails"
 gem "pry"
 gem "config"

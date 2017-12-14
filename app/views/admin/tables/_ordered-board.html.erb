@@ -1,0 +1,75 @@
+<div class="ordered-board">
+  <header class="ordered-board__header">
+    <%= image_tag "alibaba-logo.png", height: "40px", width: "40px", class: "ordered-board__logo" %>
+    <h3 class="ordered-board__title">Alibaba</h3>
+  </header>
+  <section class="ordered-board__body">
+    <div class="ordered-board__info">
+      <p>Ngày: <span>11/12/2017</span></p>
+      <p>Địa chỉ: <span>74 Nguyễn Đỗ Cung</span></p>
+      <p>Bàn số: <span>2</span></p>
+    </div>
+    <div class="ordered-board__ordering">
+      <table class="table table-striped ordered-board__table">
+        <thead>
+          <tr>
+            <th>Tên</th>
+            <th>Số lượng</th>
+            <th>Giá</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cafe đen</td>
+            <td class="ordered-board__table--quantity">
+              <i class="fa fa-caret-up fa-lg"></i>
+              <p class="ordered-board__table--number">2</p>
+              <i class="fa fa-caret-down fa-lg"></i>
+            </td>
+            <td>15 000</td>
+            <td><i class="fa fa-times-circle fa-lg ordered-board__table--delete" aria-hidden="true"></i></td>
+          </tr>
+          <tr>
+            <td>Cafe đen</td>
+            <td class="ordered-board__table--quantity">
+              <i class="fa fa-caret-up fa-lg"></i>
+              <p class="ordered-board__table--number">2</p>
+              <i class="fa fa-caret-down fa-lg"></i>
+            </td>
+            <td>15 000</td>
+            <td><i class="fa fa-times-circle fa-lg ordered-board__table--delete" aria-hidden="true"></i></td>
+          </tr>
+          <tr>
+            <td>Cafe đen</td>
+            <td class="ordered-board__table--quantity">
+              <i class="fa fa-caret-up fa-lg"></i>
+              <p class="ordered-board__table--number">2</p>
+              <i class="fa fa-caret-down fa-lg"></i>
+            </td>
+            <td>15 000</td>
+            <td><i class="fa fa-times-circle fa-lg ordered-board__table--delete" aria-hidden="true"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ordered-board__payment">
+      <div class="ordered-board__total">
+        <p class="ordered-board__text">Tổng cộng</p>
+        <p class="ordered-board__number">45.000</p>
+      </div>
+      <div class="ordered-board__total">
+        <p class="ordered-board__text">Giảm giá</p>
+        <p class="ordered-board__number discount">0 %</p>
+      </div>
+      <div class="ordered-board__total">
+        <p class="ordered-board__text">Thành tiền</p>
+        <p class="ordered-board__number money"><b>45.000</b></p>
+      </div>
+      <div class="ordered-board__btn-group">
+        <button type="button" class="btn ordered-board__btn-group--save">Lưu</button>
+        <button type="button" class="btn ordered-board__btn-group--pay">Thanh toán</button>
+      </div>
+    </div>
+  </section>
+</div>

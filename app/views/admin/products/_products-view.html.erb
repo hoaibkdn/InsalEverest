@@ -1,0 +1,90 @@
+<%# show all product %>
+<div role="tabpanel" class="tab-pane tabs-menu__product" id="profile">
+  <div class="flex-box">
+
+    <%# product tab %>
+    <%= render "/admin/products/tab-product-view" %>
+
+    <%# display product %>
+    <div class="tab-content tab-product__content">
+      <div role="tabpanel" class="tab-pane active" id="cafe">
+        <div class="col-md-3 product">
+          <div class="product__img">
+            <%= image_tag "products/cafe.jpg", width: "100%" %>
+          </div>
+          <div class="product__text">
+            <p class="product__text--name">Black coffee</p>
+            <p class="product__text--price"><b>15 000</b></p>
+          </div>
+          <div class="product__quantity">
+            <i class="fa fa-caret-up fa-2x"></i>
+            <input type="text" class="product__quantity--number" value="0">
+            <i class="fa fa-caret-down fa-2x"></i>
+          </div>
+        </div>
+        <div class="col-md-3 product">
+          <div class="product__img">
+            <%= image_tag "products/lemon-juice.png", width: "100%"%>
+          </div>
+          <div class="product__text">
+            <p class="product__text--name">Black coffee</p>
+            <p class="product__text--price"><b>15 000</b></p>
+          </div>
+          <div class="product__quantity">
+            <i class="fa fa-caret-up fa-2x"></i>
+            <input type="text" class="product__quantity--number" value="0">
+            <i class="fa fa-caret-down fa-2x"></i>
+          </div>
+        </div>
+        <div class="col-md-3 product">
+          <div class="product__img">
+            <%= image_tag "products/lemon-recipe.png", width: "100%"%>
+          </div>
+          <div class="product__text">
+            <p class="product__text--name">Black coffee</p>
+            <p class="product__text--price"><b>15 000</b></p>
+          </div>
+          <div class="product__quantity">
+            <i class="fa fa-caret-up fa-2x"></i>
+            <input type="text" class="product__quantity--number" value="0">
+            <i class="fa fa-caret-down fa-2x"></i>
+          </div>
+        </div>
+        <div class="col-md-3 product">
+          <div class="product__img">
+            <%= image_tag "products/cup-of-tea.jpg", width: "100%"%>
+          </div>
+          <div class="product__text">
+            <p class="product__text--name">Black coffee</p>
+            <p class="product__text--price"><b>15 000</b></p>
+          </div>
+          <div class="product__quantity">
+            <i class="fa fa-caret-up fa-2x"></i>
+            <input type="text" class="product__quantity--number" value="0">
+            <i class="fa fa-caret-down fa-2x"></i>
+          </div>
+        </div>
+        <div class="col-md-3 product">
+          <div class="product__img">
+            <%= image_tag "products/ice-cream.jpg", width: "100%"%>
+          </div>
+          <div class="product__text">
+            <p class="product__text--name">Black coffee</p>
+            <p class="product__text--price"><b>15 000</b></p>
+          </div>
+          <div class="product__quantity">
+            <i class="fa fa-caret-up fa-2x"></i>
+            <input type="text" class="product__quantity--number" value="0">
+            <i class="fa fa-caret-down fa-2x"></i>
+          </div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="fruit">fruit</div>
+      <div role="tabpanel" class="tab-pane" id="iceCream">fruit</div>
+      <div role="tabpanel" class="tab-pane" id="tea">tea</div>
+      <div role="tabpanel" class="tab-pane" id="can">can</div>
+    </div>
+  </div>
+</div>
+<div role="tabpanel" class="tab-pane" id="messages">Messages</div>
+<div role="tabpanel" class="tab-pane" id="settings">Settings</div>

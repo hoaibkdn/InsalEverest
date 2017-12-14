@@ -1,1 +1,242 @@
-Trang chủ cho tất cả mọi người dùng
+
+<div class="body-content">
+  <div class="header-lg">
+    <header class="header">
+      <div class="container">
+        <h1 class="header__logo">
+          <a href="#" class="header__link">
+            <%= image_tag "alibaba-logo.png", height: "30px", width: "30px", class: "logo" %>
+            <h3 class="header__name">Alibaba</h3>
+          </a>
+        </h1>
+      </div>
+    </header>
+  </div>
+  <div class="container">
+
+    <%# tab bar %>
+    <ul class="nav nav-tabs tabs-menu" role="tablist">
+      <li role="presentation" class="active"><a class="tabs-menu__link" href="#tables" aria-controls="tables" role="tab" data-toggle="tab">Tables</a></li>
+      <li role="presentation"><a class="tabs-menu__link" href="#profile" aria-controls="profile" role="tab" data-toggle="tab">product</a></li>
+      <li role="presentation"><a class="tabs-menu__link" href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Statistics money</a></li>
+      <li role="presentation"><a class="tabs-menu__link" href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Manage Staffs</a></li>
+      <li role="presentation"><a class="tabs-menu__link" href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Manage product</a></li>
+      <li role="presentation"><a class="tabs-menu__link" href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Manage Tables</a></li>
+    </ul>
+
+    <%# tab content %>
+    <div class="tabs-content">
+      <div class="col-md-8">
+        <div class="tab-content tabs-menu__content">
+
+          <%# show all tables %>
+          <div role="tabpanel" class="tab-pane tabs-menu__table active" id="tables">
+            <div class="floor-table">
+              <p class="floor-table__name">Floor 1</p>
+              <ul class="floor-table__group">
+                <li class="floor-table__item">
+                  <p class="floor-table__number">1</p>
+                  <button type="button" class="btn floor-table__btn">+</button>
+                </li>
+                <li class="floor-table__item ordered">
+                  <p class="floor-table__number">1</p>
+                  <button type="button" class="btn floor-table__btn">+</button>
+                </li>
+                <li class="floor-table__item">
+                  <p class="floor-table__number">1</p>
+                  <button type="button" class="btn floor-table__btn">+</button>
+                </li>
+                <li class="floor-table__item">
+                  <p class="floor-table__number">1</p>
+                  <button type="button" class="btn floor-table__btn">+</button>
+                </li>
+                <li class="floor-table__item">
+                  <p class="floor-table__number">1</p>
+                  <button type="button" class="btn floor-table__btn">+</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <%# show all product %>
+          <div role="tabpanel" class="tab-pane tabs-menu__product" id="profile">
+            <div class="flex-box">
+
+              <%# product tab %>
+              <ul class="nav nav-tabs tab-product" role="tablist">
+                <li role="presentation" class="tab-product__item active"><a href="#cafe" aria-controls="cafe" role="tab" data-toggle="tab">Cafe</a></li>
+                <li role="presentation" class="tab-product__item"><a href="#fruit" aria-controls="fruit" role="tab" data-toggle="tab">Fruit</a></li>
+                <li role="presentation" class="tab-product__item"><a href="#iceCream" aria-controls="iceCream" role="tab" data-toggle="tab">Ice cream</a></li>
+                <li role="presentation" class="tab-product__item"><a href="#tea" aria-controls="tea" role="tab" data-toggle="tab">Tea</a></li>
+                <li role="presentation" class="tab-product__item"><a href="#can" aria-controls="can" role="tab" data-toggle="tab">Can</a></li>
+                <li role="presentation" class="tab-product__item"><a href="#can" aria-controls="can" role="tab" data-toggle="tab">Can</a></li>
+              </ul>
+
+              <%# display product %>
+              <div class="tab-content tab-product__content">
+                <div role="tabpanel" class="tab-pane active" id="cafe">
+                  <div class="col-md-3 product">
+                    <div class="product__img">
+                      <%= image_tag "products/cafe.jpg", width: "100%" %>
+                    </div>
+                    <div class="product__text">
+                      <p class="product__text--name">Black coffee</p>
+                      <p class="product__text--price"><b>15 000</b></p>
+                    </div>
+                    <div class="product__quantity">
+                      <i class="fa fa-caret-up fa-2x"></i>
+                      <input type="text" class="product__quantity--number" value="0">
+                      <i class="fa fa-caret-down fa-2x"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-3 product">
+                    <div class="product__img">
+                      <%= image_tag "products/lemon-juice.png", width: "100%"%>
+                    </div>
+                    <div class="product__text">
+                      <p class="product__text--name">Black coffee</p>
+                      <p class="product__text--price"><b>15 000</b></p>
+                    </div>
+                    <div class="product__quantity">
+                      <i class="fa fa-caret-up fa-2x"></i>
+                      <input type="text" class="product__quantity--number" value="0">
+                      <i class="fa fa-caret-down fa-2x"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-3 product">
+                    <div class="product__img">
+                      <%= image_tag "products/lemon-recipe.png", width: "100%"%>
+                    </div>
+                    <div class="product__text">
+                      <p class="product__text--name">Black coffee</p>
+                      <p class="product__text--price"><b>15 000</b></p>
+                    </div>
+                    <div class="product__quantity">
+                      <i class="fa fa-caret-up fa-2x"></i>
+                      <input type="text" class="product__quantity--number" value="0">
+                      <i class="fa fa-caret-down fa-2x"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-3 product">
+                    <div class="product__img">
+                      <%= image_tag "products/cup-of-tea.jpg", width: "100%"%>
+                    </div>
+                    <div class="product__text">
+                      <p class="product__text--name">Black coffee</p>
+                      <p class="product__text--price"><b>15 000</b></p>
+                    </div>
+                    <div class="product__quantity">
+                      <i class="fa fa-caret-up fa-2x"></i>
+                      <input type="text" class="product__quantity--number" value="0">
+                      <i class="fa fa-caret-down fa-2x"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-3 product">
+                    <div class="product__img">
+                      <%= image_tag "products/ice-cream.jpg", width: "100%"%>
+                    </div>
+                    <div class="product__text">
+                      <p class="product__text--name">Black coffee</p>
+                      <p class="product__text--price"><b>15 000</b></p>
+                    </div>
+                    <div class="product__quantity">
+                      <i class="fa fa-caret-up fa-2x"></i>
+                      <input type="text" class="product__quantity--number" value="0">
+                      <i class="fa fa-caret-down fa-2x"></i>
+                    </div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="fruit">fruit</div>
+                <div role="tabpanel" class="tab-pane" id="iceCream">fruit</div>
+                <div role="tabpanel" class="tab-pane" id="tea">tea</div>
+                <div role="tabpanel" class="tab-pane" id="can">can</div>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="messages">Messages</div>
+          <div role="tabpanel" class="tab-pane" id="settings">Settings</div>
+        </div>
+      </div>
+
+      <%# ordering board %>
+      <div class="col-md-4">
+        <div class="ordered-board">
+          <header class="ordered-board__header">
+            <%= image_tag "alibaba-logo.png", height: "40px", width: "40px", class: "ordered-board__logo" %>
+            <h3 class="ordered-board__title">Alibaba</h3>
+          </header>
+          <section class="ordered-board__body">
+            <div class="ordered-board__info">
+              <p>Ngày: <span>11/12/2017</span></p>
+              <p>Địa chỉ: <span>74 Nguyễn Đỗ Cung</span></p>
+              <p>Bàn số: <span>2</span></p>
+            </div>
+            <div class="ordered-board__ordering">
+              <table class="table table-striped ordered-board__table">
+                <thead>
+                  <tr>
+                    <th>Tên</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Cafe đen</td>
+                    <td class="ordered-board__table--quantity">
+                      <i class="fa fa-caret-up fa-lg"></i>
+                      <p class="ordered-board__table--number">2</p>
+                      <i class="fa fa-caret-down fa-lg"></i>
+                    </td>
+                    <td>15 000</td>
+                    <td><i class="fa fa-times-circle fa-lg ordered-board__table--delete" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Cafe đen</td>
+                    <td class="ordered-board__table--quantity">
+                      <i class="fa fa-caret-up fa-lg"></i>
+                      <p class="ordered-board__table--number">2</p>
+                      <i class="fa fa-caret-down fa-lg"></i>
+                    </td>
+                    <td>15 000</td>
+                    <td><i class="fa fa-times-circle fa-lg ordered-board__table--delete" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Cafe đen</td>
+                    <td class="ordered-board__table--quantity">
+                      <i class="fa fa-caret-up fa-lg"></i>
+                      <p class="ordered-board__table--number">2</p>
+                      <i class="fa fa-caret-down fa-lg"></i>
+                    </td>
+                    <td>15 000</td>
+                    <td><i class="fa fa-times-circle fa-lg ordered-board__table--delete" aria-hidden="true"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="ordered-board__payment">
+              <div class="ordered-board__total">
+                <p class="ordered-board__text">Tổng cộng</p>
+                <p class="ordered-board__number">45.000</p>
+              </div>
+              <div class="ordered-board__total">
+                <p class="ordered-board__text">Giảm giá</p>
+                <p class="ordered-board__number discount">0 %</p>
+              </div>
+              <div class="ordered-board__total">
+                <p class="ordered-board__text">Thành tiền</p>
+                <p class="ordered-board__number money"><b>45.000</b></p>
+              </div>
+              <div class="ordered-board__btn-group">
+                <button type="button" class="btn ordered-board__btn-group--save">Lưu</button>
+                <button type="button" class="btn ordered-board__btn-group--pay">Thanh toán</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
