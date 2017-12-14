@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171204155544) do
+ActiveRecord::Schema.define(version: 20171204172752) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "code"
@@ -22,13 +22,13 @@ ActiveRecord::Schema.define(version: 20171204155544) do
   end
 
   create_table "discounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "product_id",                null: false
+    t.integer  "product_id",                              null: false
     t.string   "name"
     t.date     "date"
-    t.float    "percent",     limit: 24
+    t.float    "percent",     limit: 24,    default: 0.0
     t.text     "description", limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.index ["product_id"], name: "index_discounts_on_product_id", using: :btree
   end
 
@@ -91,12 +91,11 @@ ActiveRecord::Schema.define(version: 20171204155544) do
   end
 
   create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "table_id",               null: false
-    t.integer  "product_id",             null: false
-    t.integer  "quantity",   default: 0
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.index ["product_id"], name: "index_orders_on_product_id", using: :btree
+    t.integer  "table_id",                            null: false
+    t.integer  "state",                 default: 0
+    t.float    "total",      limit: 24, default: 0.0
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.index ["table_id"], name: "index_orders_on_table_id", using: :btree
   end
 
@@ -115,6 +114,16 @@ ActiveRecord::Schema.define(version: 20171204155544) do
     t.text     "description", limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  create_table "product_orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "product_id",             null: false
+    t.integer  "order_id",               null: false
+    t.integer  "quantity",   default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["order_id"], name: "index_product_orders_on_order_id", using: :btree
+    t.index ["product_id"], name: "index_product_orders_on_product_id", using: :btree
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -197,10 +206,11 @@ ActiveRecord::Schema.define(version: 20171204155544) do
   add_foreign_key "locations", "positions"
   add_foreign_key "oauth_access_grants", "oauth_applications", column: "application_id"
   add_foreign_key "oauth_access_tokens", "oauth_applications", column: "application_id"
-  add_foreign_key "orders", "products"
   add_foreign_key "orders", "tables"
   add_foreign_key "position_tables", "positions"
   add_foreign_key "position_tables", "tables"
+  add_foreign_key "product_orders", "orders"
+  add_foreign_key "product_orders", "products"
   add_foreign_key "products", "categories"
   add_foreign_key "products", "units"
   add_foreign_key "shifts", "users"
