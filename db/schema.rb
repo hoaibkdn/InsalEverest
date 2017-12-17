@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171204172752) do
+ActiveRecord::Schema.define(version: 20171217123313) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "code"
@@ -140,14 +140,25 @@ ActiveRecord::Schema.define(version: 20171204172752) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "salaries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.float    "per_hour",    limit: 24, default: 0.0
+    t.float    "per_shift",   limit: 24, default: 0.0
+    t.integer  "salary_type",            default: 0
+    t.string   "description"
+    t.integer  "user_id",                              null: false
+    t.integer  "shift_id",                             null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.index ["shift_id"], name: "index_salaries_on_shift_id", using: :btree
+    t.index ["user_id"], name: "index_salaries_on_user_id", using: :btree
+  end
+
   create_table "shifts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.time     "time_in"
     t.time     "time_out"
-    t.date     "date"
-    t.integer  "user_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_shifts_on_user_id", using: :btree
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "tables", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -204,7 +215,8 @@ ActiveRecord::Schema.define(version: 20171204172752) do
   add_foreign_key "product_orders", "products"
   add_foreign_key "products", "categories"
   add_foreign_key "products", "units"
-  add_foreign_key "shifts", "users"
+  add_foreign_key "salaries", "shifts"
+  add_foreign_key "salaries", "users"
   add_foreign_key "tables", "positions"
   add_foreign_key "users", "roles"
 end
