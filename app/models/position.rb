@@ -1,4 +1,6 @@
 class Position < ApplicationRecord
-  has_many :position_tables, dependent: :destroy
-  has_many :tables, through: :position_tables
+  has_many :tables, dependent: :destroy
+  has_many :locations, dependent: :destroy
+
+  validates :name, presence: true, length: {maximum: Settings.validations.name.max_length}
 end

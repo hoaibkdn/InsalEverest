@@ -1,0 +1,22 @@
+vn:
+  activerecord:
+    errors:
+      models:
+        table:
+          attributes:
+            position:
+              required: "Tầng không được để trống"
+            name:
+              blank: "Tên bàn không được để trống"
+              taken: "Tên bàn không được trùng"
+              too_long: "Tên bàn tối đa %{count} ký tự"
+            table:
+              invalid: "Bàn không hợp lệ"
+              not_found: "Bàn không tìm thấy"
+        position:
+          attributes:
+            name:
+              blank: "Tên tầng không được để trống"
+              too_long: "Tên tầng tối đa %{count} ký tự"
+            position:
+              not_found: "Tầng không tìm thấy"

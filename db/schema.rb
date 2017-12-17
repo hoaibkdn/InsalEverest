@@ -99,15 +99,6 @@ ActiveRecord::Schema.define(version: 20171204172752) do
     t.index ["table_id"], name: "index_orders_on_table_id", using: :btree
   end
 
-  create_table "position_tables", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "position_id", null: false
-    t.integer  "table_id",    null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["position_id"], name: "index_position_tables_on_position_id", using: :btree
-    t.index ["table_id"], name: "index_position_tables_on_table_id", using: :btree
-  end
-
   create_table "positions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "code"
     t.string   "name"
@@ -164,9 +155,11 @@ ActiveRecord::Schema.define(version: 20171204172752) do
     t.string   "name"
     t.integer  "image"
     t.text     "description", limit: 65535
-    t.integer  "state"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.integer  "state",                     default: 0
+    t.integer  "position_id",                           null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.index ["position_id"], name: "index_tables_on_position_id", using: :btree
   end
 
   create_table "units", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -207,12 +200,11 @@ ActiveRecord::Schema.define(version: 20171204172752) do
   add_foreign_key "oauth_access_grants", "oauth_applications", column: "application_id"
   add_foreign_key "oauth_access_tokens", "oauth_applications", column: "application_id"
   add_foreign_key "orders", "tables"
-  add_foreign_key "position_tables", "positions"
-  add_foreign_key "position_tables", "tables"
   add_foreign_key "product_orders", "orders"
   add_foreign_key "product_orders", "products"
   add_foreign_key "products", "categories"
   add_foreign_key "products", "units"
   add_foreign_key "shifts", "users"
+  add_foreign_key "tables", "positions"
   add_foreign_key "users", "roles"
 end
