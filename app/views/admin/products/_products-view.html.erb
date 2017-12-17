@@ -1,5 +1,5 @@
 <%# show all product %>
-<div role="tabpanel" class="tab-pane tabs-menu__product" id="profile">
+<div role="tabpanel" class="tab-pane tabs-menu__product" id="product">
   <div class="flex-box">
 
     <%# product tab %>
@@ -8,7 +8,7 @@
     <%# display product %>
     <div class="tab-content tab-product__content">
       <div role="tabpanel" class="tab-pane active" id="cafe">
-        <div class="col-md-3 product">
+        <div class="col-md-3 product" data-id="1">
           <div class="product__img">
             <%= image_tag "products/cafe.jpg", width: "100%" %>
           </div>
@@ -22,7 +22,7 @@
             <i class="fa fa-caret-down fa-2x"></i>
           </div>
         </div>
-        <div class="col-md-3 product">
+        <div class="col-md-3 product" data-id="2">
           <div class="product__img">
             <%= image_tag "products/lemon-juice.png", width: "100%"%>
           </div>
@@ -36,7 +36,7 @@
             <i class="fa fa-caret-down fa-2x"></i>
           </div>
         </div>
-        <div class="col-md-3 product">
+        <div class="col-md-3 product" data-id="3">
           <div class="product__img">
             <%= image_tag "products/lemon-recipe.png", width: "100%"%>
           </div>
@@ -50,7 +50,7 @@
             <i class="fa fa-caret-down fa-2x"></i>
           </div>
         </div>
-        <div class="col-md-3 product">
+        <div class="col-md-3 product" data-id="4">
           <div class="product__img">
             <%= image_tag "products/cup-of-tea.jpg", width: "100%"%>
           </div>
@@ -64,7 +64,7 @@
             <i class="fa fa-caret-down fa-2x"></i>
           </div>
         </div>
-        <div class="col-md-3 product">
+        <div class="col-md-3 product" data-id="5">
           <div class="product__img">
             <%= image_tag "products/ice-cream.jpg", width: "100%"%>
           </div>
@@ -86,5 +86,5 @@
     </div>
   </div>
 </div>
-<div role="tabpanel" class="tab-pane" id="messages">Messages</div>
-<div role="tabpanel" class="tab-pane" id="settings">Settings</div>
+<div role="tabpanel" class="tab-pane tabs-menu__statictis-money" id="statictis-money">Money</div>
+<div role="tabpanel" class="tab-pane tabs-menu__manages-staff" id="manages-staff">Staffs</div>

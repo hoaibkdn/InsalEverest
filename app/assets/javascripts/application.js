@@ -18,5 +18,7 @@
 //= require init/app-bootstrap
 //= require init/constant
 //= require models/table
+//= require models/product
 //= require views/tables-view
+//= require views/products-view
 //= require app
