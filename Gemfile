@@ -45,6 +45,7 @@ gem "config"
 gem "figaro"
 gem "paranoia", "~> 2.2"
 gem "cancancan", "~> 1.10"
+gem "active_model_serializers"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
