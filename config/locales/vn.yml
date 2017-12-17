@@ -6,3 +6,13 @@ vn:
           attributes:
             email:
               taken: "Email này đả được đăng ký."
+        category:
+          attributes:
+            name:
+              blank: "Tên không được để trống."
+  messages:
+    create_success: "Tạo mới thành công."
+    update_success: "Cập nhật mới thành công."
+    delete_success: "Xóa thành công."
+  errors:
+    blank: "Không tìm thấy thông tin."
