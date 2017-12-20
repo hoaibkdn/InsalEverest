@@ -186,13 +186,11 @@ app.views.ProductsView.prototype.deleteProduct = function (tableNumber, caller) 
 app.views.ProductsView.prototype.onLoad = function () {
   var currentTable = localStorage.getItem('tableNumber'),
       self = this;
-  console.log('currentTable ', currentTable);
   app.orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
-  if(app.orderedProducts) {
-    console.log('app.orderedProducts ', app.orderedProducts);
+  $('.ordered-board__info p:nth-child(3) span').html(currentTable);
+  if(app.orderedProducts && app.orderedProducts[currentTable]) {
     app.orderedProducts[currentTable].forEach(function (product) {
       self.insertOnBoard(product);
-      $('.ordered-board__info p:nth-child(3) span').html(currentTable);
     })
   }
 }
