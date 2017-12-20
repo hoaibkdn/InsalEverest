@@ -1,4 +1,4 @@
 (function () {
-  new app.views.TablesView();
-  new app.views.ProductsView();
+  app.productView = new app.views.ProductsView();
+  app.tableView = new app.views.TablesView();
 }());
