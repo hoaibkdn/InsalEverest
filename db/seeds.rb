@@ -12,7 +12,17 @@ cashier = Role.create(code: "cashier", name: "Thu Ngân", description: "Quản l
 staff = Role.create(code: "staff", name: "Nhân viên", description: "Gọi món bằng thiết bị smartphone")
 
 # Tạo admin mặc định
-
 is_admin = User.create(email: "admin001@gmail.com", name: "Ngo Van Tien",
   password: "12345678", password_confirmation: "12345678",
   birthday: "09/2/1993", gender: "male", address: "đà nẵng", role_id: "1")
+
+
+# Tạo category drink default
+cafe = Category.create(name: "Cafe", description: "Các thức uống chứa cafein")
+drink = Category.create(name: "Nước giải khát", description: "Các loại nước giải khát")
+tea = Category.create(name: "Trà", description: "Các loại trà nóng lạnh")
+
+# Các loại đơn vì
+glass = Unit.create(name: "Ly", description: "Đơn vị là ly")
+gasper = Unit.create(name: "Điêú", description: "Đơi vị là điếu")
+bottle = Unit.create(name: "Chai", description: "Đơn vị là chai")
