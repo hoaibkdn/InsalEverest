@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       resources :categories, only: [:create, :update, :destroy]
       resources :tables, only: [:create, :update, :destroy]
       resources :positions, only: [:create, :update, :destroy]
+      resources :products, only: [:create, :update, :destroy]
     end
   end
 end
