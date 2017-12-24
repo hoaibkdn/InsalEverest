@@ -10,6 +10,14 @@ vn:
           attributes:
             name:
               blank: "Tên không được để trống."
+        product:
+          attributes:
+            unit_id:
+              blank: "Đơn vị không được để trống."
+            category_id:
+              blank: "Thể loại không được để trống."
+            name:
+              blank: "Tên không được để trống."
   messages:
     create_success: "Tạo mới thành công."
     update_success: "Cập nhật mới thành công."
