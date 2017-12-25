@@ -46,6 +46,8 @@ gem "figaro"
 gem "paranoia", "~> 2.2"
 gem "cancancan", "~> 1.10"
 gem "active_model_serializers"
+gem "carrierwave", "0.11.2"
+gem "mini_magick", "4.5.1"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

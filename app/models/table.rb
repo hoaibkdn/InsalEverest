@@ -6,6 +6,8 @@ class Table < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true, length: {maximum: Settings.validations.name.max_length}
 
+  mount_uploader :image, ImageUploader
+
   class << self
     def create_multi_record table_attr, number
       id_last = Table.last.try(:id) || 0

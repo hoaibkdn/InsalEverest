@@ -41,7 +41,7 @@ class Api::V1::TablesController < Api::V1::BaseController
   private
 
   def table_params
-    params.require(:table).permit :name, :image, :description, :state, :position_id
+    params.permit :name, :image, :description, :state, :position_id
   end
 
   def load_table

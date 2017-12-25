@@ -9,4 +9,6 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :unit_id, presence: true
   validates :category_id, presence: true
+
+  mount_uploader :image, ImageUploader
 end
