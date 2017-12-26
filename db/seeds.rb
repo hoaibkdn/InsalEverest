@@ -26,3 +26,9 @@ tea = Category.create(name: "Trà", description: "Các loại trà nóng lạnh"
 glass = Unit.create(name: "Ly", description: "Đơn vị là ly")
 gasper = Unit.create(name: "Điêú", description: "Đơi vị là điếu")
 bottle = Unit.create(name: "Chai", description: "Đơn vị là chai")
+
+# Tạo các tầng
+(1..5).to_a.each{|i| Position.create name: "Tầng #{i}"}
+
+# Tạo một số cái bàn
+(1..5).to_a.each{|i| Table.create name: "B#{i}", position_id: Position.first.id}
