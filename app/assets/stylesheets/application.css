@@ -13,4 +13,5 @@
  *= require_self
  *= require style_app.css.scss
  *= require font-awesome
+ *= require dataTables/jquery.dataTables
  */

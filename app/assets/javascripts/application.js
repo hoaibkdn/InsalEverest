@@ -14,11 +14,14 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require dataTables/jquery.dataTables
 
 //= require init/app-bootstrap
 //= require init/constant
+//= require helpers/price-helpers
 //= require models/table
 //= require models/product
+//= require views/board-view
 //= require views/tables-view
 //= require views/products-view
 //= require app

@@ -56,20 +56,26 @@
     display: flex;
     justify-content: center;
     &--save {
-      background: $cl-ordered-board-btn-active;
       border-radius: 0;
       margin-right: 10px;
-      color: $cl-white;
-      &:hover {
-        background-color: $cl-ordered-board-btn-hover;
-      }
     }
     &--pay {
-      border: 1px solid $cl-ordered-board-btn-default;
       border-radius: 0;
-      &:hover {
-        background-color: $cl-ordered-board-btn-hover;
-      }
     }
+  }
+}
+
+.btn-strong {
+  background: $cl-ordered-board-btn-active;
+  color: $cl-white;
+  &:hover {
+    background-color: $cl-ordered-board-btn-hover;
+  }
+}
+
+.btn-normal {
+  border: 1px solid $cl-ordered-board-btn-default;
+  &:hover {
+    background-color: $cl-ordered-board-btn-hover;
   }
 }

@@ -9,30 +9,37 @@ app.views.TablesView.prototype.selectTable = function(caller) {
   $('.floor-table__item').removeClass('focus');
   caller.addClass('focus');
 
-  let isEmpty = !caller.attr('class').includes('ordered');
+  let isEmpty = !caller.attr('class').includes('ordered'),
+      isOrdering = caller.attr('style');
+
+  // Add number of table into board
+  var tableNumber = caller.children('.floor-table__number').text();
+      // displayingTable = $('.ordered-board__info p:nth-child(3) span').text();
+  $('.ordered-board__info p:nth-child(3) span').html(tableNumber);
+  localStorage.setItem('tableNumber', tableNumber.toString());
 
   // If is an empty table change tab to Product
-  if(isEmpty) {
+  if(isEmpty || isOrdering) {
     this.activeTab(2, 'tabs-menu__product');
+    app.boardView.updateStatusBtn({saveBtn: false, paymentBtn: false});
+  }
+  else if(!isOrdering && !isEmpty) {
+    app.boardView.updateStatusBtn({saveBtn: false, paymentBtn: true});
+  }
+  (isOrdering) && app.boardView.updateStatusBtn({saveBtn: true, paymentBtn: false});
 
-    // Add number of table into board
-    var tableNumber = caller.children('.floor-table__number').text(),
-        displayingTable = $('.ordered-board__info p:nth-child(3) span').text();
-    $('.ordered-board__info p:nth-child(3) span').html(tableNumber);
-    localStorage.setItem('tableNumber', tableNumber.toString());
-
-    // Clear ordering board If doesn't save into localstorage
-    var orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
-    if(orderedProducts) {
-      $('.ordered-board__table').find('tbody tr').remove();
-      if(orderedProducts[tableNumber]) {
-        orderedProducts[tableNumber].forEach(function (product) {
-          (displayingTable !== tableNumber) && app.productView.insertOnBoard(product);
-        });
-        this.renderQuantityOnProducts();
-      }
+  // Clear ordering board If doesn't save into localstorage
+  var orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
+  if(orderedProducts) {
+    $('.ordered-board__table').find('tbody tr').remove();
+    if(orderedProducts[tableNumber]) {
+      orderedProducts[tableNumber].forEach(function (product) {
+        app.boardView.insertOnBoard(product);
+      });
     }
   }
+  this.renderQuantityOnProducts();
+  app.boardView.totalMoney(tableNumber);
 }
 
 app.views.TablesView.prototype.keepCurrentTab = function() {
@@ -90,6 +97,9 @@ app.views.TablesView.prototype.renderQuantityOnProducts = function () {
       orderedProducts = JSON.parse(localStorage.getItem('orderedProducts')),
       products = $('.product'),
       numOfProducts = products.length;
+  for(let i = 0; i < numOfProducts; i++) {
+    $(products[i]).find('.product__quantity--number').val(0)
+  }
   if(orderedProducts && orderedProducts[currentTable]) {
     orderedProducts[currentTable].forEach(function (pro) {
       for(let i = 0; i < numOfProducts; i++) {
@@ -98,11 +108,6 @@ app.views.TablesView.prototype.renderQuantityOnProducts = function () {
         }
       }
     })
-  }
-  else {
-    for(let i = 0; i < numOfProducts; i++) {
-      $(products[i]).find('.product__quantity--number').val(0)
-    }
   }
 }
 

@@ -2,6 +2,7 @@
   window.app = window.app || {};
   app.models = app.models || {};
   app.views = app.views || {};
+  app.helpers = app.helpers || {};
 
   app.orderedProducts = app.orderedProducts || {};
 }())
