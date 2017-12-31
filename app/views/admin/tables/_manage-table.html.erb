@@ -1,0 +1,125 @@
+<div role="tabpanel" class="tab-pane tabs-menu__manages-tables" id="manageTables">
+
+  <%# tab %>
+  <ul class="nav nav-tabs tab-tables" role="tablist">
+    <li role="presentation" class="active"><a href="#mPosition" aria-controls="mPosition" role="tab" data-toggle="tab">Position</a></li>
+    <li role="presentation"><a href="#mTables" aria-controls="mTables" role="tab" data-toggle="tab">Tables</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane t-tables" id="mTables">
+      <select class="selectpicker select-position">
+        <option val="All tables">All tables</option>
+        <option val="Floor 1">Floor 1</option>
+        <option val="Floor 2">Floor 2</option>
+        <option val="Yard">Yard</option>
+      </select>
+
+      <table id="allTables" class="display" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Status</th>
+            <th>Time in</th>
+            <th>Total money (d)</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>T1</td>
+            <td>Floor 1</td>
+            <td>Active</td>
+            <td>7:30 PM Today</td>
+            <td>105 000</td>
+            <td>
+              <i class="fa fa-pencil fa-lg"/>
+              <i class="fa fa-trash fa-lg"/>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>T2</td>
+            <td>Floor 1</td>
+            <td>Active</td>
+            <td>7:30 PM Today</td>
+            <td>105 000</td>
+            <td>
+              <i class="fa fa-pencil fa-lg"/>
+              <i class="fa fa-trash fa-lg"/>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>F1</td>
+            <td>Floor 2</td>
+            <td>Active</td>
+            <td>7:30 PM Today</td>
+            <td>105 000</td>
+            <td>
+              <i class="fa fa-pencil fa-lg"/>
+              <i class="fa fa-trash fa-lg"/>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>F2</td>
+            <td>Floor 2</td>
+            <td>Active</td>
+            <td>7:30 PM Today</td>
+            <td>105 000</td>
+            <td>
+              <i class="fa fa-pencil fa-lg"/>
+              <i class="fa fa-trash fa-lg"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div role="tabpanel" class="tab-pane t-positions active" id="mPosition">
+      <table id="allPosition" class="display" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Total tables</th>
+            <th>Active</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Floor 1</td>
+            <td>23</td>
+            <td>12</td>
+            <td>
+              <i class="fa fa-pencil fa-lg"/>
+              <i class="fa fa-trash fa-lg"/>
+            </td>
+          </tr>
+          <tr>
+            <td>Floor 2</td>
+            <td>12</td>
+            <td>5</td>
+            <td>
+              <i class="fa fa-pencil fa-lg"/>
+              <i class="fa fa-trash fa-lg"/>
+            </td>
+          </tr>
+          <tr>
+            <td>Yard</td>
+            <td>14</td>
+            <td>18</td>
+            <td>
+              <i class="fa fa-pencil fa-lg"/>
+              <i class="fa fa-trash fa-lg"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

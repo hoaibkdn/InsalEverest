@@ -1,0 +1,18 @@
+.tab-tables {
+  border-bottom: 0;
+  & > li.active > a:focus,
+  & > li.active > a {
+    border: 1px solid #ff8700;
+    background: #ff8700;
+    color: #fff;
+    border-radius: 0;
+  }
+  & > li > a,
+  & > li > a:hover{
+    border-radius: 0;
+    box-sizing: border-box;
+    border: 1px solid #ff8700;
+    color: #ff8700;
+    background: #fff;
+  }
+}
