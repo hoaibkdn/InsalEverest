@@ -49,6 +49,7 @@ gem "active_model_serializers"
 gem "carrierwave", "0.11.2"
 gem "mini_magick", "4.5.1"
 gem 'jquery-datatables-rails', '~> 3.4.0'
+gem 'bootstrap-select-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

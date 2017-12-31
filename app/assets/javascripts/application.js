@@ -24,4 +24,5 @@
 //= require views/board-view
 //= require views/tables-view
 //= require views/products-view
+//= require views/manage-table-view
 //= require app
