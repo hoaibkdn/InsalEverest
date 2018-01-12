@@ -2,6 +2,7 @@ app.views.TablesView = function() {
   this.handleEvent('selectTable');
   this.handleEvent('onLoad');
   this.handleEvent('onSelectTab');
+  this.handleEvent('changeTable');
 }
 
 app.views.TablesView.prototype.selectTable = function(caller) {
@@ -111,6 +112,26 @@ app.views.TablesView.prototype.renderQuantityOnProducts = function () {
   }
 }
 
+app.views.TablesView.prototype.renderTablesPopUpUI = function (orderedProducts, eleWrapper) {
+  var table = '<li class="floor-table__item">' +
+                '<p class="floor-table__number">' +  + '</p>' +
+              '</li>',
+      floor = '<div class="floor-table popup-change">' +
+                '<p class="floor-table__name">Floor 1</p>' +
+              '</div>';
+  
+}
+
+app.views.TablesView.prototype.renderTablesPopUp = function (type) {
+  var orderedProducts = JSON.parse(localStorage.getItem('orderedProducts')),
+      tablesWrapper = $('.changed-tables-list');
+  if(type === 'merge') {
+    if(orderedProducts) {
+      tablesWrapper
+    }
+  }
+}
+
 app.views.TablesView.prototype.handleEvent = function(event, handler) {
   var self = this;
   switch (event) {
@@ -125,6 +146,16 @@ app.views.TablesView.prototype.handleEvent = function(event, handler) {
       $('.tabs-menu').on('click', 'li', function() {
         self.saveCurrentTab($(this));
         self.displayChildContent($(this).attr('data-tab'));
+      });
+      break;
+
+    case 'changeTable':
+      $('.floor-table').on('click', '.floor-table__btn', function(e) {
+        var tableName = $(this).prev().text();
+        $('.table-from').html(tableName);
+
+        $('#changeTable').modal('show');
+
       });
       break;
     default:

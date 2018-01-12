@@ -5,24 +5,81 @@
     <ul class="floor-table__group">
       <li class="floor-table__item">
         <p class="floor-table__number">1</p>
-        <button type="button" class="btn floor-table__btn">+</button>
+        <button type="button" class="btn floor-table__btn" data-toggle="modal" data-target="#changeTables">+</button>
       </li>
       <li class="floor-table__item">
         <p class="floor-table__number">2</p>
-        <button type="button" class="btn floor-table__btn">+</button>
+        <button type="button" class="btn floor-table__btn" data-toggle="modal" data-target="#changeTables">+</button>
       </li>
       <li class="floor-table__item">
         <p class="floor-table__number">3</p>
-        <button type="button" class="btn floor-table__btn">+</button>
+        <button type="button" class="btn floor-table__btn" data-toggle="modal" data-target="#changeTables">+</button>
       </li>
       <li class="floor-table__item">
         <p class="floor-table__number">4</p>
-        <button type="button" class="btn floor-table__btn">+</button>
+        <button type="button" class="btn floor-table__btn" data-toggle="modal" data-target="#changeTables">+</button>
       </li>
       <li class="floor-table__item">
         <p class="floor-table__number">5</p>
-        <button type="button" class="btn floor-table__btn">+</button>
+        <button type="button" class="btn floor-table__btn" data-toggle="modal" data-target="#changeTables">+</button>
       </li>
     </ul>
+  </div>
+</div>
+
+<%# modal change/ merge table%>
+<div class="modal fade" id="changeTables">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        Bạn muốn
+          <select>
+            <option value="merge">GỘP</option>
+            <option value="change">CHUYỂN</option>
+          <select>
+        bàn <b class="table-from"></b> vào bàn nào?
+      </div>
+      <div class="modal-body changed-tables-list">
+        <div class="floor-table">
+          <p class="floor-table__name">Floor 1</p>
+          <ul class="floor-table__group ">
+            <li class="floor-table__item">
+              <p class="floor-table__number">1</p>
+            </li>
+            <li class="floor-table__item">
+              <p class="floor-table__number">2</p>
+            </li>
+            <li class="floor-table__item">
+              <p class="floor-table__number">3</p>
+            </li>
+            <li class="floor-table__item">
+              <p class="floor-table__number">4</p>
+            </li>
+            <li class="floor-table__item">
+              <p class="floor-table__number">5</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#confirmChangeTable">Ok</button>
+        <button type="button" class="btn btn-default">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%# confirm %>
+<div class="modal fade" id="confirmChangeTable">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        Are you sure you change table 1 to 3?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning">Ok</button>
+        <button type="button" class="btn btn-default">Cancel</button>
+      </div>
+    </div>
   </div>
 </div>
