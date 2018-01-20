@@ -15,12 +15,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require dataTables/jquery.dataTables
+//= require bootstrap-select
 
 //= require init/app-bootstrap
 //= require init/constant
+//= require services/http-services
+//= require services/login-services
 //= require helpers/price-helpers
 //= require models/table
 //= require models/product
+//= require views/login-view
 //= require views/board-view
 //= require views/tables-view
 //= require views/products-view

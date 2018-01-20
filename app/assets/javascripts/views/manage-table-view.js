@@ -18,8 +18,8 @@ app.views.ManageTableView.prototype.initAllPostion = function () {
 }
 
 app.views.ManageTableView.prototype.onLoad = function () {
-  console.log('onload')
   $('.t-positions').addClass('active');
+  // $('.selectpicker').selectpicker();
 }
 
 app.views.ManageTableView.prototype.handleEvent = function (event) {

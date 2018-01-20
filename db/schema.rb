@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(version: 20171217123313) do
   create_table "positions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "code"
     t.string   "name"
+    t.string   "image"
     t.text     "description", limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
@@ -184,6 +185,7 @@ ActiveRecord::Schema.define(version: 20171217123313) do
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                                default: "", null: false
     t.string   "name"
+    t.string   "avatar"
     t.text     "address",                limit: 65535
     t.integer  "gender",                               default: 0
     t.date     "birthday"

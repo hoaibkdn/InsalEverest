@@ -1,4 +1,4 @@
-var httpServices = {
+app.services.httpServices = {
   url: app.constant.baseUrl,
   get: function(path) {
     return $.ajax({
@@ -17,14 +17,10 @@ var httpServices = {
     return $.ajax({
       url: this.url+ '/' + path,
       method: "POST",
-      contentType: 'application/json',
-      data: data,
-      xhrFields: {
-        withCredentials: true
+      headers: {
+        "Content-Type": 'application/json'
       },
-      headers: (headers) ? {
-        Accept: "application/json"
-      } : null
+      data: data
     });
   },
 
